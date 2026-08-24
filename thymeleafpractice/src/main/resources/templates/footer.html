@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<footer th:fragment = "footer1(title,substitle)">
+		<div class = "container">
+			<h1 th:text="${title}"></h1>
+			<h1 th:text="${substitle}"></h1>
+			<h1>Feel free to contact & work with Us</h1>
+			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit neque natus exercitationem id facere totam animi dicta adipisci doloribus odit consequatur voluptatum repellendus modi corrupti nulla quis doloremque sed quibusdam!</h3>
+		</div>
+	</footer>
+</body>
+</html>

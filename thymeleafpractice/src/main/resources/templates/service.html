@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Fragment </title>
+</head>
+<body>
+
+<h1>This is the page for fragment learning</h1>
+<footer th:replace="footer::footer1(${title},${substitle})">
+
+</footer>
+
+</body>
+</html>
