@@ -15,16 +15,20 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                sh 'mvn clean package -DskipTests'
-            }
+    steps {
+        dir('thymeleafpractice') {
+            sh 'mvn clean package -DskipTests'
         }
+    }
+}
 
-        stage('Docker Build') {
-            steps {
-                sh 'docker build -t $DOCKER_IMAGE .'
-            }
+      stage('Docker Build') {
+    steps {
+        dir('thymeleafpractice') {
+            sh 'docker build -t $DOCKER_IMAGE .'
         }
+    }
+}
 
         stage('Docker Push') {
             steps {
